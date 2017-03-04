@@ -1,0 +1,11 @@
+{
+  "name": "preact-hyperstyler",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "preact-hyperstyler",
+  "dependencies": {
+    "preact-hyperscript": "^0.7.0",
+    "preact-hyperscript-h": "^0.1.1"
+  }
+}
