@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "",
   "main": "index.js",
-  "repository": "preact-hyperstyler",
+  "repository": "laggingreflex/preact-hyperstyler",
   "dependencies": {
     "preact-hyperscript": "^0.7.0",
     "preact-hyperscript-h": "^0.1.1"
