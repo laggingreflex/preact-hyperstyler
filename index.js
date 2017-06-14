@@ -50,8 +50,15 @@ function processNode(node, styles, opts) {
 
   var classKey = opts.classKey || 'class'
 
-  if (!node || !node.attributes || !node.attributes[classKey]) {
+  if (!node) {
     return
+  }
+
+  if (!node.attributes) {
+    node.attributes = {};
+  }
+  if (!node.attributes[classKey]) {
+    node.attributes[classKey] = {};
   }
 
   var classProperty = node.attributes[classKey]
@@ -72,6 +79,8 @@ function processNode(node, styles, opts) {
       return classes
     }, [])
   }
+
+  classes.push(node.nodeName)
 
   var add = []
   classes.forEach(function(className) {
