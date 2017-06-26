@@ -80,7 +80,14 @@ function processNode(node, styles, opts) {
     }, [])
   }
 
-  classes.push(node.nodeName)
+  if (typeof node.nodeName === 'string') {
+    classes.push(node.nodeName)
+  } else if (typeof node.nodeName === 'function') {
+    const name = node.nodeName.name;
+    if (name) {
+      classes.push(name.charAt(0).toLowerCase() + name.substr(1));
+    }
+  }
 
   var add = []
   classes.forEach(function(className) {
